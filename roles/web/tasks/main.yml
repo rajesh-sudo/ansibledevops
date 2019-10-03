@@ -1,0 +1,10 @@
+---
+# These tasks install http and the php modules.
+
+- name: Install http and php etc
+  yum: name={{ item }} state=present
+  with_items:
+   - httpd
+   - php
+   - git
+
